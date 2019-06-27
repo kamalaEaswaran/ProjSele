@@ -37,6 +37,9 @@ public class contactUsPage {
 	//WebElement eleOrderOfRef = driver.findElement(By.xpath("id_order")); -- we cannot declare like this as it will throw null pointer excpetion
 	WebElement eleOrderOfRef;
 	
+	@FindBy(id="message")
+	public WebElement txtboxMsg;
+		
 	public WebElement contact() { 
 		 // linkContactUs=  driver.findElement(By.xpath("//a[@title='Contact Us']")); 
 		  return driver.findElement(linkContactUs); 
