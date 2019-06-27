@@ -26,7 +26,7 @@ public class readExcel {
 		Sheet sheet = wb.getSheet("Sheet1");
 		
 		int noofRows = sheet.getLastRowNum() - sheet.getFirstRowNum();
-		
+		System.out.println(noofRows);
 		int i=1;
 		Row row = sheet.getRow(i);
 		String[][] str = new String[noofRows][row.getLastCellNum()];

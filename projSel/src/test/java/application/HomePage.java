@@ -66,7 +66,7 @@ public class HomePage extends base {
 		cont.selectType();
 		cont.editEmail(email); // or cont.emailele().sendKeys("tets@gmail.com");;
 		cont.orderOfRef(ordervalue);	
-		cont.txtboxMsg.sendKeys("contact us page message");
+		cont.txtboxMsg.sendKeys("enter some text in the message box");
 		
 	}
 
