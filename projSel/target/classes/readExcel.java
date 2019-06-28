@@ -17,6 +17,7 @@ public class readExcel {
 	public String[][] getdatafromExcel() throws IOException{
 		//File file = new File("D:\\eclipse\\projSel\\src\\main\\java\\resources\\InputData.xlsx");
 		File file = new File(System.getProperty("user.dir")+"/src/main/java/resources/InputData.xlsx");
+		
 		FileInputStream fis = new FileInputStream(file);
 		/* To read XLS files, an HSSF implementation is provided by POI library.
 		*To read XLSX, XSSF implementation of POI library will be the choice.XSSFWorkbook is imported from import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -29,8 +30,7 @@ public class readExcel {
 		System.out.println(noofRows);
 		int i=1;
 		Row row = sheet.getRow(i);
-		String[][] str = new String[noofRows][row.getLastCellNum()];
-		
+		String[][] str = new String[noofRows][row.getLastCellNum()];		
 		
 		while(i<=noofRows){
 			row = sheet.getRow(i);
@@ -42,13 +42,6 @@ public class readExcel {
 		}
 		System.out.println(str[0][0]+" "+str[0][1]);
 		System.out.println(str[1][0]+" "+str[1][1]);
-		return str;
-		
-		
-		
-		
-	}
-
-		
-	
+		return str;		
+	}	
 }

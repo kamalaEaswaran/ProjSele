@@ -39,7 +39,7 @@ public class ExtentReporterNG implements IReporter {
         extent.flush();
         extent.close();
     }
- 
+    
     private void buildTestNodes(IResultMap tests, LogStatus status) {
         ExtentTest test;
  

@@ -25,6 +25,8 @@ public class base extends ExtentReporterNG {
 	protected Properties props = new Properties();;
 	String filepath= System.getProperty("user.dir")+"/src/main/java/resources/config.properties";
 	public browserENUM browser;
+	String path =new File("").getAbsolutePath();
+	String filename = path+"\\driverJars\\";
 	
 	public void getBrowser() throws IOException {
 		FileInputStream file = new FileInputStream(filepath);
@@ -43,15 +45,14 @@ public class base extends ExtentReporterNG {
 	}
 	public WebDriver initializeDriver() throws Exception {
 		getBrowser();
-		
 		switch (browser) { 
 			case Chrome :
-				System.setProperty("webdriver.chrome.driver", "D:\\driverJars\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", filename+"chromedriver.exe");
 				driver = new ChromeDriver();
 				//test.log(LogStatus.PASS, "initiliased chrome driver");
 				break;
 			case InternetExplorer :
-				System.setProperty("webdriver.ie.driver", "D:\\driverJars\\IEDriverServer");
+				System.setProperty("webdriver.ie.driver", filename+"IEDriverServer");
 				driver= new InternetExplorerDriver();
 				break;
 			case Firefox:

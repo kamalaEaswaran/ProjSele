@@ -109,9 +109,7 @@ public class HomePage extends base {
 		str = read.getdatafromExcel();
 		//System.out.println(str[0][0]+" "+str[0][1]);
 		return str;
-	}
-	
-	
+	}	
 }
 
 
