@@ -56,7 +56,7 @@ public class base extends ExtentReporterNG {
 				options.addArguments("--disable-dev-shm-usage");
 
 				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver();
+				driver = new ChromeDriver(options);
 				//test.log(LogStatus.PASS, "initiliased chrome driver");
 				break;
 			case InternetExplorer :
