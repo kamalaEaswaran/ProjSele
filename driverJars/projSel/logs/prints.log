@@ -1,0 +1,4 @@
+01:26:47:936 [TestNG-test=Test-1] DEBUG application.HomePage - Clicking sign in link
+01:26:50:290 [TestNG-test=Test-1] INFO  application.HomePage - Clicking contact us in link
+01:26:51:633 [TestNG-test=Test-1] INFO  application.HomePage - entering values in the fields
+01:26:52:125 [TestNG-test=Test-1] INFO  application.contactUsPage - entering order value 
