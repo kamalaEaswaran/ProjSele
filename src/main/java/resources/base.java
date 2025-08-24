@@ -50,14 +50,9 @@ public class base extends ExtentReporterNG {
 		switch (browser) { 
 			case Chrome :
 			//	System.setProperty("webdriver.chrome.driver", filename+"chromedriver.exe");
-				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless"); // Required in Gitpod
-				options.addArguments("--no-sandbox");
-				options.addArguments("--disable-dev-shm-usage");
-				options.addArguments("--remote-allow-origins=*");
 
 				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver(options);
+				driver = new ChromeDriver();
 				//test.log(LogStatus.PASS, "initiliased chrome driver");
 				break;
 			case InternetExplorer :
