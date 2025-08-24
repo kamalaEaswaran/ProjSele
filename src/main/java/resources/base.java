@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -47,7 +48,8 @@ public class base extends ExtentReporterNG {
 		getBrowser();
 		switch (browser) { 
 			case Chrome :
-				System.setProperty("webdriver.chrome.driver", filename+"chromedriver.exe");
+			//	System.setProperty("webdriver.chrome.driver", filename+"chromedriver.exe");
+				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
 				//test.log(LogStatus.PASS, "initiliased chrome driver");
 				break;
