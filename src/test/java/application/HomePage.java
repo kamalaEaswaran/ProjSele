@@ -46,6 +46,7 @@ public class HomePage extends base {
 	@BeforeTest
 	public void invokeapplication() throws Exception {
 		driver = initializeDriver();
+		driver.get("https://www.google.com");
 		driver.get(props.getProperty("url"));
 		//test.log(LogStatus.PASS, "Open the application");
 		driver.manage().window().maximize();

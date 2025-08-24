@@ -54,6 +54,7 @@ public class base extends ExtentReporterNG {
 				options.addArguments("--headless"); // Required in Gitpod
 				options.addArguments("--no-sandbox");
 				options.addArguments("--disable-dev-shm-usage");
+				options.addArguments("--remote-allow-origins=*");
 
 				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver(options);
